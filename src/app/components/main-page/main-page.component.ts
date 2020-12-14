@@ -32,25 +32,34 @@ export class MainPageComponent implements OnInit {
     if (form.style.display === 'none' || form.style.display === '') {
       console.log(form.style.display);
       form.style.display = 'block';
-    } else{
-      console.log(form.style.display);
-      form.style.display = 'none';
-    }
-    console.log('clicked');
-    if (id === 'canvas' && this.canvasName === 'Show'){
-     this.canvasName = 'Hide';
-    } else {
-      if (id === 'canvas' && this.canvasName === 'Hide') {
-        this.canvasName = 'Show';
+      if (id === 'canvas') {
+        this.canvasName = 'Hide';
+      } else {
+        this.formName = 'Hide';
       }
-    }
-    if (id === 'form' && this.formName === 'Show'){
-      this.formName = 'Hide';
-    } else {
-      if (id === 'form' && this.formName === 'Hide') {
+    } else{
+      form.style.display = 'none';
+      if (id === 'canvas') {
+        this.canvasName = 'Show';
+      } else {
         this.formName = 'Show';
       }
     }
+    console.log('clicked');
+    // if (id === 'canvas' && this.canvasName === 'Show'){
+    //  this.canvasName = 'Hide';
+    // } else {
+    //   if (id === 'canvas' && this.canvasName === 'Hide') {
+    //     this.canvasName = 'Show';
+    //   }
+    // }
+    // if (id === 'form' && this.formName === 'Show'){
+    //   this.formName = 'Hide';
+    // } else {
+    //   if (id === 'form' && this.formName === 'Hide') {
+    //     this.formName = 'Show';
+    //   }
+    // }
   }
 }
 
