@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, monospace;
+  font-size: 12pt;
+  font-style: inherit;
+  /*background: darkgoldenrod;*/
+  color: #00112c;
+}
+@media only screen and (max-width: 699px) {
+  html, body {
+    height: 100%;
+  }
+  #content{
+    overflow: scroll;
+    height: 500px;
+  }
+}

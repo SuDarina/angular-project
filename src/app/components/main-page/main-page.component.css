@@ -1,0 +1,90 @@
+#send{
+  border: 1px solid darkcyan;
+  color: darkcyan;
+
+}
+#send:hover{
+  border: 1px solid darkcyan;
+  background: darkcyan;
+  color: white;
+}
+
+form, table{
+  margin: auto;
+}
+
+#canvas{
+  display: block;
+}
+
+
+.hiddenButton{
+  display: none;
+}
+
+div{
+  height: 100%;
+}
+
+td, th{
+  text-align: center;
+  width: 25%;
+}
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+@media only screen and (max-width: 699px){
+  table {
+    width: 80%;
+  }
+  .hiddenButton{
+    display: block;
+    text-align: center;
+    margin: auto;
+  }
+  #form{
+    display: none;
+  }
+  #canvas{
+    display: none;
+  }
+}
+@media only screen and (min-width: 700px) and (max-width: 1243px){
+  table{
+    width: 50%
+  }
+  #form{
+    display: block;
+  }
+  #canvas{
+    display: block;
+  }
+  .hiddenButton{
+    display: none;
+  }
+
+}
+
+@media only screen and (min-width: 1244px){
+  table{
+    width: 40%;
+  }
+  #form{
+    display: block;
+  }
+  .hiddenButton{
+    display: none;
+  }
+  #canvas{
+    display: block;
+  }
+}
+
+/*form{*/
+/*  width: 50%;*/
+/*}*/
+
