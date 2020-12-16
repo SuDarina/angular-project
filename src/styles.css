@@ -11,6 +11,8 @@ body{
   /*background: darkgoldenrod;*/
   color: #00112c;
 }
+
+
 @media only screen and (max-width: 699px) {
   html, body {
     height: 100%;

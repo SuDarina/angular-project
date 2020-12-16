@@ -13,15 +13,6 @@ form, table{
   margin: auto;
 }
 
-#canvas{
-  display: block;
-}
-
-
-.hiddenButton{
-  display: none;
-}
-
 div{
   height: 100%;
 }
@@ -30,6 +21,15 @@ td, th{
   text-align: center;
   width: 25%;
 }
+
+form{
+  display: block;
+}
+
+#canvas{
+  display: block;
+}
+
 footer{
   position: fixed;
   left: 0;
@@ -43,8 +43,7 @@ footer{
   overflow: scroll;
 }
 
-@media only screen and (max-width: 699px){
-
+@media only screen and (max-width: 700px){
   table {
     width: 80%;
   }
@@ -60,14 +59,7 @@ footer{
     display: none;
   }
 }
-@media only screen and (min-width: 700px) and (max-width: 1243px){
-  /*footer{*/
-  /*  height: 10%;*/
-  /*}*/
-  /*#content{*/
-  /*  height: 80%;*/
-  /*  overflow: scroll;*/
-  /*}*/
+@media only screen and (min-width: 700px) and (max-width: 1244px){
   table{
     width: 50%
   }
@@ -84,13 +76,6 @@ footer{
 }
 
 @media only screen and (min-width: 1244px){
-  /*footer{*/
-  /*  height: 10%;*/
-  /*}*/
-  /*#content{*/
-  /*  height: 80%;*/
-  /*  overflow: scroll;*/
-  /*}*/
   table{
     width: 40%;
   }
@@ -104,8 +89,4 @@ footer{
     display: block;
   }
 }
-
-/*form{*/
-/*  width: 50%;*/
-/*}*/
 

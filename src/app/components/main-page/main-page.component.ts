@@ -1,22 +1,20 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
-import {GraphicComponent} from '../graphic/graphic.component';
-import {migrateLegacyGlobalConfig} from '@angular/cli/utilities/config';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
-  styleUrls: ['./main-page.component.css']
+  styleUrls: ['./main-page.component.css'],
 })
 export class MainPageComponent implements OnInit {
+  constructor() {
+  }
   canvasName: string;
   formName: string;
-  constructor() { }
 
   ngOnInit(): void {
     this.formName = 'Show';
     this.canvasName = 'Show';
   }
-
   clickButton(): void{
     console.log('Send is clicked!');
     const table = document.getElementsByTagName('table').item(0);
@@ -27,7 +25,6 @@ export class MainPageComponent implements OnInit {
     row.insertCell(3).innerHTML = 'ujoiiuh';
   }
   click(id: string): void{
-    // document.getElementById('form').setAttribute('style', 'display: block');
     const form = document.getElementById(id);
     if (form.style.display === 'none' || form.style.display === '') {
       console.log(form.style.display);
@@ -46,20 +43,43 @@ export class MainPageComponent implements OnInit {
       }
     }
     console.log('clicked');
-    // if (id === 'canvas' && this.canvasName === 'Show'){
-    //  this.canvasName = 'Hide';
-    // } else {
-    //   if (id === 'canvas' && this.canvasName === 'Hide') {
-    //     this.canvasName = 'Show';
-    //   }
-    // }
-    // if (id === 'form' && this.formName === 'Show'){
-    //   this.formName = 'Hide';
-    // } else {
-    //   if (id === 'form' && this.formName === 'Hide') {
-    //     this.formName = 'Show';
-    //   }
-    // }
+  }
+  resize(): void{
+    this.formName = 'Show';
+    this.canvasName = 'Show';
+    const but = document.getElementById('hiddenButton');
+    const canvasBut = document.getElementById('hiddenCanvas');
+    const form = document.getElementById('form');
+    const canvas = document.getElementById('canvas');
+    if (document.body.clientWidth < 700) {
+      form.style.display = 'none';
+      canvas.style.display = 'none';
+      but.style.display = 'block';
+      canvasBut.style.display = 'block';
+    } else {
+      form.style.display = 'block';
+      canvas.style.display = 'block';
+      but.style.display = 'none';
+      canvasBut.style.display = 'none';
+    }
   }
 }
+// tslint:disable-next-line:only-arrow-functions
+// window.addEventListener('resize', function(): void{
+//   const but = document.getElementById('hiddenButton');
+//   const canvasBut = document.getElementById('hiddenCanvas');
+//   const form = document.getElementById('form');
+//   const canvas = document.getElementById('canvas');
+//   if (document.body.clientWidth < 700) {
+//     form.style.display = 'none';
+//     canvas.style.display = 'none';
+//     but.style.display = 'block';
+//     canvasBut.style.display = 'block';
+//   } else {
+//     form.style.display = 'block';
+//     canvas.style.display = 'block';
+//     but.style.display = 'none';
+//     canvasBut.style.display = 'none';
+//   }
+// });
 
